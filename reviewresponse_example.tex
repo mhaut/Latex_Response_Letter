@@ -22,26 +22,29 @@
 \newcommand{\myAuthors}{{John.~Doe$^{\displaystyle 1}$, ~Foo~B.~Bar$^{\displaystyle 2}$, } \\ {~Peter Sanchez$^{\displaystyle 2}$}}
 \newcommand{\myAuthorsShort}{John.~Doe et. al}
 \newcommand{\myEmail}{john@uco.es}
+% title{Letter response My Submited Paper Tittle} % This is for latex tittle
 \newcommand{\myTitle}{My Submited Paper Tittle}
 \newcommand{\myShortTitle}{Response to reviewers}
 \newcommand{\myJournal}{Journal Name}
-\newcommand{\myDept}{{$^{\displaystyle 1}$Department of Computer Science and Numerical Analysis, University of C\'{o}rdoba, C\'{o}rdoba 14074, Spain. \\ \url{http://www.uco.es/ayrna/}}\\
-{$^{\displaystyle 2}$School of Computer Science, The University of XXX. }\\}
+\newcommand{\myDept}{{$^{\displaystyle 1}$Department of Technology of Computers and Communications, Escuela Polit\'ecnica, University of Extremadura, PC-10003 C\'aceres, Spain.}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %\usepackage[linktoc=all]{hyperref}
 \usepackage[linktoc=all,bookmarks,bookmarksopen=true,bookmarksnumbered=true]{hyperref}
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography*
 
 \hypersetup{
-pdfauthor = {\myAuthorsShort},
-pdftitle = {\myTitle},
-pdfsubject = {\myJournal\xspace},
-colorlinks = true,
-linkcolor=black!70!green,          % color of internal links
-citecolor=black!70!green,        % color of links to bibliography
-filecolor=magenta,      % color of file links
-urlcolor=black!70!green           % color of external links
+	pdfauthor = {\myAuthorsShort},
+	pdftitle = {\myTitle},
+	pdfsubject = {\myJournal\xspace},
+	colorlinks = true,
+	linkcolor=black!70!green,          % color of internal links
+	citecolor=black!70!green,        % color of links to bibliography
+	filecolor=magenta,      % color of file links
+	urlcolor=black!70!green           % color of external links
 }
 
 \begin{document}
@@ -58,6 +61,12 @@ urlcolor=black!70!green           % color of external links
 \end{center}
 
  \textbf{General response:} We are pleased to resubmit for publication the revised version of... . We sincerely thank the editor and all reviewers for their valuable feedback that we have used to improve the quality of our manuscript. The reviewer comments are laid out below in \textit{italicized font} and specific concerns have been numbered. Our response is given in normal font and changes/additions to the manuscript are given in \newtext{blue text}. We hope the revised version is now suitable for publication and look forward to hearing from you in due course.
+
+ Some example citation:
+ \begin{itemize}
+ 	\item  \bibentry{Haut2017CloudAnalysis}
+ 	\item  \bibentry{Green1998ImagingAVIRIS}
+ \end{itemize}
 
 \tableofcontents
 
@@ -109,8 +118,8 @@ I would like to see a few add ons to substantiate the approach in particular reg
 We want to thank the reviewer for this comment. In order to satisfy this petition we have added a new Subsection...
 
 % Uncomment in case references are needed
-%\bibliographystyle{apalike}
-%\bibliography{responsereferences}
+\bibliographystyle{apalike}
+\nobibliography{exampleBIB}
 
 
 \end{document}
